@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+Disallow: /checkout/
+
+# Local development value. In production this must point to the API origin
+# (the backend serves /sitemap.xml).
+Sitemap: http://localhost:8000/sitemap.xml

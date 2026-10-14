@@ -1,0 +1,22 @@
+services:
+  frontend:
+    build:
+      context: ..
+      target: base
+      dockerfile: .devcontainer/Dockerfile
+    container_name: react_headless_dev
+    ports:
+      - "5173:5173"
+    environment:
+      - NODE_ENV=development
+      - VITE_API_BASE_URL=${VITE_API_BASE_URL:-http://localhost:8000/api/v1}
+      - CHOKIDAR_USEPOLLING=true
+    volumes:
+      # Mount host source code
+      - ..:/app
+      # Isolated internal volume for container node_modules
+      - node_modules_data:/app/node_modules
+    command: sh -c "npm install && npm run dev -- --host 0.0.0.0"
+
+volumes:
+  node_modules_data:

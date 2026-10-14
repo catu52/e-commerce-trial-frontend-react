@@ -1,0 +1,28 @@
+{
+  "name": "React Headless Dev Container",
+  "dockerComposeFile": ["./docker-compose.yml"],
+  "service": "frontend",
+  "workspaceFolder": "/app",
+  "overrideCommand": false,
+  "customizations": {
+    "vscode": {
+      "settings": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+        "editor.formatOnSave": true,
+        "editor.codeActionsOnSave": {
+          "source.fixAll.eslint": "explicit"
+        },
+        "typescript.tsdk": "node_modules/typescript/lib"
+      },
+      "extensions": [
+        "dbaeumer.vscode-eslint",
+        "esbenp.prettier-vscode",
+        "dsznajder.es7-react-js-snippets",
+        "bradlc.vscode-tailwindcss"
+      ]
+    }
+  },
+  "forwardPorts": [5173],
+  "remoteUser": "node",
+  "postCreateCommand": "npm install"
+}

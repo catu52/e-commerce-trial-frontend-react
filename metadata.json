@@ -1,0 +1,6 @@
+{
+  "name": "KRAFT Studio",
+  "description": "Bauhaus Neo-Brutalist architectural apparel and object archive featuring geometric utility collections, audited spec catalogs, dispatch bag, and complete checkout protocol.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
